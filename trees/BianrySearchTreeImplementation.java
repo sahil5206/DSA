@@ -1,16 +1,16 @@
 import java.util.*;
 
-class BinarySearchTreePractice{
+class BianrySearchTree{
     static class Node{
-        int data;
-        Node left;
-        Node right;
+        public int data;
+        public Node left, right;
         
         Node(int data){
             this.data = data;
+            this.left = null;
+            this.right = null;
         }
     }
-    
     public static Node insert(Node root, int val){
         if(root == null){
             root = new Node(val);
@@ -18,14 +18,13 @@ class BinarySearchTreePractice{
         }
         
         if(root.data > val){
-            root.left = insert(root.left, val);
+           root.left =  insert(root.left, val);
         }else{
-            root.right = insert(root.right, val);
+           root.right = insert(root.right, val);
         }
+        
         return root;
     }
-
-//inorder of BST will always be in the sorted manner in the output
     public static void inorder(Node root){
         if(root == null){
             return;
@@ -37,12 +36,33 @@ class BinarySearchTreePractice{
     }
     
     public static void main(String[] args){
-        int[] values = {5, 1, 3, 4, 2, 7};
+        int[] values = {5,1,3,4,2,7};
         Node root = null;
         
         for(int i = 0; i < values.length; i++){
-            root = insert(root, values[i]);
+            root = insert(root, values[i]); 
         }
         inorder(root);
+        System.out.println();
+        
+        if(search(root, 7)){
+            System.out.print("founded");
+        }else{
+            System.out.print("not founded");
+        }
+        
+    }
+    
+    public static boolean search(Node root, int key){
+        if(root == null){
+            return false;
+        }
+        
+        if(root.data > key){
+            return search(root.left, key);
+        }else if(root.data < key){
+            return search(root.right, key);
+        }
+        return true;
     }
 }
