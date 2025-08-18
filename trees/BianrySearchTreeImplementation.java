@@ -45,7 +45,7 @@ class BianrySearchTree{
         inorder(root);
         System.out.println();
         
-        if(search(root, 7)){
+        if(search(root, 7) != null){
             System.out.print("founded");
         }else{
             System.out.print("not founded");
