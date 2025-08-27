@@ -20,7 +20,9 @@ class HashMapPractice {
         map.remove("gaurav");
         System.out.println(map);
         
-        
+        //updating a value of the specific key
+        map.put("sumit", 45);
+        System.out.println(map);
         
         
     }
