@@ -31,6 +31,15 @@ class HashMapPractice {
             System.out.println("no it does not contains sahil");
         }
         
+        //to get the value of a key
+        System.out.println(map.get("harsh"));
+        
+        //Iteration in HashMap
+        for(Map.Entry<String, Integer>e : map.entrySet()){
+            System.out.println(e.getKey());
+            System.out.println(e.getValue());
+        }
+        
         
     }
 }
