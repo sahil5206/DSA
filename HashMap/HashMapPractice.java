@@ -24,6 +24,13 @@ class HashMapPractice {
         map.put("sumit", 45);
         System.out.println(map);
         
+        //searching/lookup in HashMap
+        if(map.containsKey("sahil")){
+            System.out.println("yes it contains sahil");
+        }else{
+            System.out.println("no it does not contains sahil");
+        }
+        
         
     }
 }
