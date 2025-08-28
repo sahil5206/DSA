@@ -34,3 +34,35 @@ class HashSetPractice{
         }
     }
 }
+
+
+//------------------------------------------------------------------------------------------------------------------------------
+//A different and little advance approach for the above funtions
+import java.util.*;
+
+class HashSetParctice {
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        HashSet<Integer> set = new HashSet<>();
+        
+        //inserting elements using a loop from the array
+        int[] arr = {2,4,5,7,6,9};
+        for(int i = 0; i < arr.length; i++){
+            set.add(arr[i]);
+        }
+        
+        //printing the complete set
+        System.out.println(set);
+        
+        
+        //taking input from the user for deleting the element from the set
+        System.out.print("enter the item you want to delete: ");
+        int delete = sc.nextInt();
+        if(set.contains(delete)){
+            set.remove(delete);
+        }else{
+            System.out.println("this number is not in the set");
+        }
+        System.out.println(set);
+    }
+}
