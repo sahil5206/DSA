@@ -54,7 +54,6 @@ class HashSetParctice {
         //printing the complete set
         System.out.println(set);
         
-        
         //taking input from the user for deleting the element from the set
         System.out.print("enter the item you want to delete: ");
         int delete = sc.nextInt();
@@ -64,5 +63,14 @@ class HashSetParctice {
             System.out.println("this number is not in the set");
         }
         System.out.println(set);
+        
+        //Size of the set
+        System.out.println("the size of the set is: " + set.size());
+        
+        //Iteration
+        Iterator it = set.iterator();
+        while(it.hasNext()){
+            System.out.println(it.next());
+        }
     }
 }
