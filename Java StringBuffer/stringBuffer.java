@@ -4,7 +4,7 @@ import java.util.*;
 //StringBuffer is Thread-Safe in java.
 //StringBuffer is usually slower in terms of time complexity beacause of its Thread-Safe condition becasue threads waits for locks.
 
-class StringBuffer {
+class StringBufferPractice {
     public static void main(String[] args) {
         
         //creating first object of stringBuffer class provided by java
