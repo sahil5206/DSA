@@ -61,10 +61,14 @@ class LL {
             }
             temp = temp.next;
         }
-        System.out.println(" null ");
+        System.out.println("null");
         
         System.out.print("backward traversal: ");
-        
+        while(tail != null){
+            System.out.print(tail.data + " <-> ");
+            tail = tail.prev;
+        }
+        System.out.println("null");
     }
     
 }
